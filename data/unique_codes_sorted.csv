@@ -1,0 +1,841 @@
+Incident Code,Incident Description
+1000,"Weapon, Concealed, Loitering While Carrying"
+1001,"Cloned Cellular Phone, Use"
+1002,Suicide By Asphyxiation
+1003,"Rape, Assault To, W/ Gun"
+1004,Wearing Mask or Disguise for Unlawful Purpose
+1005,Kidnapping for Ransom or Extortion
+1007,"Stolen Access Card, Possession"
+1062,Loitering for Purpose of Prostitution
+1133,"Vehicle, Seizure Order"
+1160,Post Release Community Supervision
+2001,Soliciting Customer to Purchase Alcoholic Beverage
+2002,"Embezzlement, Petty Theft, Leased Property"
+2003,"Theft, By Prostitute, <$50"
+2004,"Extortion, Attempted"
+2005,"Rail Transit, Entering, Remaining, or Hindering Operation of"
+2020,"Auto, Grand Theft of"
+2101,"Burglary, Safe, Warehouse, with Explosives"
+2102,"Burglary, Warehouse Under Constr, Unlawful Entry"
+2103,"Telephone or Telegraph Messages, Altering"
+2104,"Access Card or Signature, Forgery of"
+2201,Trespass within 30 days of Credible Threat
+2202,"Citizenship Document, Using False"
+2204,Sales of Cocaine Base/Schoolyard Trafficking Act Violation
+3011,"Robbery, Street or Public Place, W/ Gun"
+3012,False Report of Emergency
+3013,Theft of Computers or Cell Phones
+3014,"Dog, Bite or Attack"
+3021,"Controlled Substance, Sale"
+3022,"Animal, Cruelty to"
+3023,"Theft, Coin Operated Machine, Att."
+3024,"Theft, Other Property, <$50"
+3031,"Alcohol, Unlawful Transportation Of"
+3032,"Robbery, Bank, W/ Other Weapon"
+3033,"Burglary, Safe, Other"
+3034,"Hallucinogenic, Sale"
+3041,"Robbery, W/ Knife"
+3042,"Burglary, Flat Under Constr., Forcible Entry"
+3043,"Theft, From Unlocked Vehicle, Att."
+3044,"Battery, Sexual"
+3051,"Firearm, Discharging At An Inhabited Dwelling"
+3052,"Theft, Drunk Roll, Att."
+3053,"Phone Calls, Threatening or Annoying"
+3054,"Theft, Bicycle, >$950"
+3061,"Weapon, Assault, Registration or Transfer Violation"
+3062,SFMTA Parking and Control Officer
+3063,Barbiturates Offense
+3064,"Burglary, Hotel Under Constr., Unlawful Entry"
+3071,"Theft, From Person, <$50 (other than Pickpocket)"
+3072,Missing Adult
+3073,"Theft, Pickpocket, <$50"
+3074,"Robbery, W/ Force"
+3081,"Theft, Pickpocket, $200-$950"
+3082,"Firearm, Discharging at Unoccupied Bldg, Vehicle or Aircraft"
+3083,"Theft, Lost Property, Grand"
+3084,"Robbery, Att., Chain Store, W/ Other Weapon"
+3091,"Burglary, Other Bldg. Under Constr., Unlawful Entry"
+3092,"Vehicle Alarm Code Grabbing Device, Possess or Use"
+3093,"Civil Rights, incl. Injury, Threat, or Damage (Hate Crimes)"
+3094,Heroin Offense
+3401,"Drugs, Under Influence  in a Public Place"
+3411,"Robbery, Att., W/ Other Weapon"
+3412,"Flammable or Explosive Device, Possession"
+3413,"EPO or Restraining Order Violation, DVU related"
+3414,"Phone Calls, Threatening"
+3421,"Disturbing The Peace, Fighting"
+3422,"Privacy, Invasion of  (general)"
+3423,"Theft, Shoplifting, Att."
+3424,"Trash, Placing On The Street"
+3431,"Gambling Devices, Possession"
+3432,Service of Documents Related to a Civil Drug Abatement and/or Public Nuisance Action
+3433,Megan's Law Notification
+3434,Threat to State Official or Judge
+3441,"Public Transit, Acts Against"
+3442,"Robbery, Residence, W/ Knife"
+3443,"Assault, Att. Homicide, W/ Knife"
+3444,"Checks, Money Orders, Completed, Fraudulent Possession"
+3451,Carjacking with a Knife
+3452,"Robbery, Att., Service Station W/ Force"
+3453,"Bribery or Gratuity,  Public Employees"
+3454,"Permit Violation, Entertainment"
+3461,"Robbery,  ATM, Other Weapon"
+3462,Military Ordinance
+3463,"Shooting, Accidental"
+3464,"Robbery, Att., Comm. Establ., W/ Force"
+3471,"Firearm, Possession of While Wearing Mask"
+3472,Solicits For Act Of Prostitution
+3473,Obstructing Public Thoroughfare  (or 647(c) PC)
+3474,"Driving, Speeding"
+3481,Crimes Involving Receipts or Titles
+3483,Money Offense Related to Narcotics Trafficking
+3484,"Theft, Phone Booth, $200-$950"
+3491,Obscene Matter (general)
+3492,"Rape, Spousal"
+3493,Terrorizing by Arson or Explosive Device
+3494,"Marijuana, Transporting"
+4011,"Assault, Aggravated, W/ Gun"
+4012,"Assault, Aggravated, W/ Knife"
+4013,"Assault, Aggravated, W/ Other Weapon"
+4014,"Warrant Arrest, Enroute To US Marshall"
+4021,"Robbery,  ATM, Force."
+4022,"Assault, Aggravated, On Police Officer, W/ Force"
+4023,"Theft, Shoplifting, <$50"
+4024,Kidnapping during Carjacking
+4026,"Theft, Coin Operated Machine, $50-$200"
+4033,Battery with Serious Injuries
+4051,"Theft, Grand, by Fiduciary, >$950 in 12 months"
+4052,"Arson, Attempted"
+4053,Accidental Lacerations
+4054,"Throwing Object at Common Carrier, Passenger or Freight"
+4061,"Theft, Coin Operated Machine, <$50"
+4062,Pimping
+4063,"Fireworks, Exploding"
+4064,"Theft, Animal, Att."
+4072,"Money, Property or Labor, Fraudulently Obtaining"
+4073,"Burglary, Hot Prowl, Forcible Entry"
+4074,"Burglary, Hotel Under Constr., Forcible Entry"
+4076,Hallucinogenics Offense
+4080,"Vehicle, Stolen, Mobile Home or House Trailer"
+4081,"Evading a Police Officer, Injury or Death"
+4082,"Robbery, Att., Comm. Establ., W/ Gun"
+4083,"Firearm, Loaded, in Vehicle, Possession or Use"
+4084,"Stolen Computer, Possession"
+4091,"Disturbing The Peace, Swearing"
+4092,"Theft, From Locked Vehicle, >$950"
+4093,Suicide By Strangulation/Hanging
+4104,"Traffic Collision, Hit & Run, Injury"
+4114,"Theft, Bicycle, $200-$950"
+4124,"Driving, Drag Racing"
+4134,Battery
+4136,Hate Crime (secondary only)
+4138,"Injuring Phone, Cable TV, or Other Line"
+4144,"Switchblade Knife, Possession"
+4145,"Weapon, Deadly, Possession W/ Intent To Assault"
+4146,Suicide By Jumping
+4154,"Driving, No License Issued"
+4164,Arson with Great Bodily Injury
+4170,"Cocaine, Base/rock, Sale"
+5011,"Cocaine, Base/rock Offense"
+5012,"Weapon, Assault, Possession, Manufacture, or Sale"
+5013,"Robbery, Street or Public Place, W/ Force"
+5014,"Burglary, Other Bldg., Unlawful Entry"
+5015,Park Code Violation (general)
+5021,"Assault, Aggravated, On Police Officer, W/ Gun"
+5022,"Robbery, Att., Street or Public Place, W/ Other Weapon"
+5023,"Arson, Police Vehicle"
+5031,"Burglary, Safe,  Residence"
+5032,"Permit Violation, Police (general)"
+5033,"Theft, From Building, Att."
+5041,"Theft, From Person, >$950 (other than Pickpocket)"
+5042,"Malicious Mischief, Breaking Windows"
+5043,"Vehicle, Impounded"
+5051,"Burglary, Hot Prowl, Att. Forcible Entry"
+5052,"Theft, From Unlocked Vehicle, $200-$950"
+5053,"Burglary, Residence, Att. Forcible Entry"
+5061,"Assault, W/ Caustic Chemical to Injure or Disfigure"
+5062,Cryptocurrency Related Crime (secondary code only)
+5063,"Burglary, Vehicle, Att. (Arrest made)"
+5071,Traffic Collision
+5072,"Burglary, Store, Forcible Entry"
+5073,"Vehicle, Stolen, Other Vehicle"
+5081,Extortion or Blackmail
+5082,"Vehicle, Stolen, Attempted"
+5083,Restraining Order Notification/Service of Restraining Order
+5111,"Aerosol Container; Sale, Purchase or Possession of"
+5112,"Robbery, Att., Chain Store, W/ Gun"
+5113,"Robbery, Att., Residence, W/ Gun"
+5121,"Theft, Bicycle, $50-$200"
+5122,"Theft, By Prostitute, $200-$400"
+5123,Federal Law Violation (general)
+5131,Shooting into Inhabited Dwelling or Occupied Vehicle
+5133,"Theft, Motorcycle Strip, $50-$200"
+5141,"Robbery, Comml. Establ., W/ Force"
+5142,"Driving, Reckless"
+5143,Probation Search
+5151,"Burglary, Other Bldg., Forcible Entry"
+5152,"Theft, From Locked Vehicle, Att."
+5153,Carjacking with a Gun
+5161,Trespassing or Loitering Near Posted Industrial Property
+5162,"Abortion, Unlawful"
+5163,"Aerosol Paint & Marker Pens, Display & Storage"
+5171,"Alcohol, Consuming In Public View"
+5172,"Electrical  or Gas Lines, Interfering with"
+5173,"Driving, Stunt Vehicle/Street Racing"
+5211,"Parking Meter, Unlawful Operation or Use of Slugs"
+5231,"Robbery, Service Station, W/ Knife"
+5241,"House of Prostitution, Keeping or Residing in"
+5251,"Burglary, Apartment House, Att. Forcible Entry"
+5261,"Eavesdropping Devices, Sale or Use"
+5271,"Theft, Bicycle, Att."
+5361,"Rape, Forcible, W/ Gun"
+5371,"Barbiturates, Possession For Sale"
+6110,Maintain Premise Where Narcotics Are Sold/used
+6111,"Firearm, Armed While Possessing Controlled Substance"
+6112,Search Warrant Service
+6113,"Weapon, Prohibited, Possession, Sale, Mfg., Import"
+6114,"Theft, From Person, Att. (other than Pickpocket)"
+6120,"Armor Penetrating Ammunition, Possession"
+6121,"Theft, Boat"
+6122,"Theft, Bicycle, <$50, no serial number"
+6123,"Fire Protection Equipment, Tampering with"
+6124,Assault to Commit Mayhem or Specific Sex Offenses
+6125,"Counterfeit Coins Or Notes, Possessing or Receiving"
+6126,"Death Report, Natural Causes"
+6130,"Manslaughter, Accidental, W/ Other Weapon"
+6131,Suicide By Ingestion
+6132,"Homicide, W/ Sharp Object"
+6133,Riot
+6134,Domestic Violence (secondary only)
+6141,"Bathroom Hole, Looking through"
+6142,"Theft, Motorcycle Strip, $200-$950"
+6143,Loitering near ATM
+6150,"Robbery, Comml. Establ., W/ Gun"
+6151,"Resisting, Delaying, or Obstructing  Peace Officer Duties"
+6152,"Stay Away Order Violation, DVU related"
+6153,Trespassing
+6154,"Aided Case, Sick Person"
+6157,"Police Broadcast, Interception to Commit Crime"
+6211,"Opium Derivative, Possession For Sale"
+6212,"Robbery, Vehicle for Hire, Att., W/ Force"
+6213,"Identification, Government, Possess, Make or Sell False"
+6214,"Fire Alarm, False"
+6220,Public Transit Crimes - Infractions
+6221,"Theft, From Unlocked Vehicle, >$950"
+6222,Bomb Threat or False Report of Bomb
+6223,"Burglary, Non-residential, Unlawful Entry"
+6224,"Access Card, incl. Credit, Phone, ATM, Fraudulent Use of"
+6230,"Theft, Motorcycle Strip, >$950"
+6231,"Sexual Contact with Patient, former Patient"
+6232,"Homicide, W/ Gun"
+6233,"Theft, Other Property, >$950"
+6234,"Theft, Shoplifting, $50-$200"
+6240,"Burglary, Store, Unlawful Entry"
+6241,"Aided case, Naloxone Deployment"
+6242,"Theft, From Locked Vehicle, $50-$200"
+6243,"Fraudulent Game or Trick, Obtaining Money or Property"
+6244,"Stolen Property, Possession with Knowledge, Receiving"
+6246,"Theft, Vehicle Strip, >$950"
+6300,"Robbery, Att., Comm. Establ. With Other Weapon"
+6301,"Vehicle, Recovered, Truck"
+6302,"Theft, Vehicle Strip, $200-$950"
+6303,"Theft, From Building, $200-$950"
+6304,"Suspicious Occurrence, possible Shots Fired"
+6310,Vandalism with Noxious Chemical
+6312,"Forgery, Checks, Felony"
+6313,Methamphetamine Offense
+6314,"Robbery, Street or Public Place, W/ Other Weapon"
+6315,Theft of Checks or Credit Cards
+6316,"Burglary Tools, Possession Of w/prior"
+6340,"Vehicle, Seizure Order Service"
+6341,"Obstructing Health Facility, Place of Worship, or School"
+6342,"Firearms, Seizing at Scene of DVU"
+6343,"Robbery,  ATM, Knife"
+6344,"Suicide By Strangulation/Hanging, Att."
+6351,"Theft, Phone Booth, $50-$200"
+6352,Push-cart Peddler Permit Violation
+6353,"False Claims, Presenting to Government"
+6354,"VIN, Possess to Defraud"
+6360,"Assault, Non-Aggravated"
+6361,"Battery, former Spouse or Dating Relationship"
+6362,"Vehicle, Recovered, Other Vehicle"
+6363,"Theft, Shoplifting, $200-$950"
+6364,"Vehicle, Stolen, Auto"
+6365,"Theft, Purse Snatch, $200-$950"
+6370,Throwing Injurious Substance on Highway
+6371,Aided Case -Property for Destruction
+6372,"Theft, Other Property, $50-$200"
+6373,"Burglary, Non-residential, Att. Forcible"
+6374,"License Plate or Tab, Theft of"
+6375,"Procurement, Pimping, & Pandering"
+6377,Escapes
+6378,Human Trafficking (A)-Commercial Sex Acts
+6381,Threatening School or Public Employee
+6383,Soliciting Commission Of A Crime
+6386,"Animal, without Proper Care or Attention"
+6391,"Lodging, Registering w/False Name"
+6394,Violation of Restraining Order
+6395,"Robbery,  ATM, Other Weapon, Att."
+6396,Sodomy (Adult Victim)
+6397,"Destructive Device, Possession"
+6398,"Theft, Drunk Roll, >$950"
+6399,"Computer System, Accessing, Copying, or Damaging"
+6400,Fraudulent Use Of Automated Teller Card
+7020,"Assault, Aggravated, W/ Force"
+7021,"Burglary, Residence, Unlawful Entry"
+7022,"Arson, Inhabited Dwelling"
+7023,Evading a Police Officer Recklessly
+7024,"Theft, From Person, $50-$200 (other than Pickpocket)"
+7025,Miscellaneous Investigation
+7026,"Methamphetamine, Sale"
+7027,"Robbery, Att., Bank, W/ Gun"
+7041,"Vehicle, Recovered, Auto"
+7042,Defrauding Of Vehicle Repairman
+7043,"Burglary, Hot Prowl, Unlawful Entry"
+7044,"Robbery, Service Station, W/ Force"
+7045,"Ammunition, Poss. By Prohibited Person"
+7046,Theft of Animals (general)
+7051,"Assault, Aggravated, On Police Off., W/ Other Weapon"
+7052,"Robbery, Att., W/ Force"
+7053,"Stay Away or Court Order, Non-DV Related"
+7054,Driving While Under The Influence Of Alcohol
+7055,"Vehicle, Recovered, Stolen outside SF"
+7056,"Theft, By Prostitute, $50-$200"
+7060,"Theft, Vehicle Strip, Attempted"
+7100,"Burglary, Store, Att. Forcible Entry"
+7200,"Suicide By Ingestion, Att."
+7201,Looting during State of Emergency
+7202,"Stolen Metals, Receiving"
+7203,Homicide By Sniping
+7204,"Suicide By Asphyxiation, Att."
+7205,"Amphetamine, Possession For Sale"
+7206,"Robbery, Bank, W/ Gun"
+9010,"Barbiturates, Possession"
+9015,Forgery & Counterfeiting (general)
+9016,False Personation
+9020,"Public Nuisance, Maintaining After Notification"
+9021,"School, Disrupt Activities"
+9022,"Contraband, Taking Into A Reformatory"
+9023,"School Grounds, Entry by Sex Offender"
+9024,"License Plate, Stolen"
+9026,False Personation and Cheat Crimes (general)
+9027,"Credit Application, Fraudulent"
+9029,"School Property, Disturbance on"
+9030,Theft of Utility Services
+9031,"Access Card Counterfeiting Machinery, Possession of"
+9032,"Chop Shop, Own or Operate"
+9034,False Report of Felony or Misdemeanor
+9035,Dissuading/Threatening Of A Witness
+9040,Property for Identification
+9060,"Vehicle, Throwing Substance At"
+9110,"Embezzlement, Grand Theft"
+9120,"Indecent Exposure, W/ Prior Conviction"
+9125,Loitering and Peeking into Inhabited Structure
+9130,"Advertisements, Affixing To Poles"
+9140,Bribery Of Witnesses
+9150,Graffiti on Government Vehicles or Public Transportation
+9161,Terrorizing by Marking Private Property
+9162,"Rape, Assault To, W/ Force"
+9163,"Assault, Att. Mayhem, W/ Other Weapon"
+9164,"Weapon, Carrying Concealed with Felony or Narcotics Conviction"
+9165,"Robbery, Att., Bank, W/ Knife"
+9166,"Weapon, Possessing in Public Building or Open Meeting"
+9167,Evading Payment of Railroad Fare
+9171,"Hypodermic Needle or Syringe, Possession"
+9173,"Civil Sidewalks, Warning"
+9175,"Embezzlement, Petty Theft"
+9176,"Embezzlement, Petty Theft By Property Carrier"
+9210,"Assault, Att. Homicide, W/ Force"
+9215,"Robbery, Att., Street or Public Place, W/ Gun"
+9250,False Personation to Receive Money or Property
+9261,Solicits Lewd Act
+9262,SFMTA Muni Transit Operator-Bus/LRV
+9263,"Forgery, Government Or Corporate Seals"
+9264,"Homicide, Drive-by"
+9265,Gun Violence Restraining Order Violation
+9266,Suicide By Laceration/Stabbing
+9267,"Vehicle, Recovered, Bus"
+9268,"Legal Instruments, Uttering False Checks, etc. (misd.)"
+9269,"Robbery, Att., W/ Knife"
+9270,"Assault, By Police Officers"
+9271,Refusing To Disperse Upon Lawful Command
+9310,Incident On School Grounds
+9320,"Shoplifting, Force against Agent"
+9330,Liquor Law Violation (general)
+9340,Aided Case
+10010,"Fire Bomb, Possession or Use"
+10015,"Destructive Device, Exploding"
+10020,Scalping Tickets
+10025,"Burglary, Safe,  Warehouse"
+10035,"Cocaine, Sale"
+10040,"Counterfeiting, Coins Or Notes"
+10045,"Robbery,  ATM, Force, Att."
+10050,"Indecent Exposure, Prostitution Related"
+10055,"Amphetamine, Transportation"
+10060,Massage Establishment Permit Violation
+10065,"Vehicle, Disabled Placard Violation"
+10070,"Theft, Short Change"
+10075,"Robbery, Att., Residence, W/ Force"
+10085,"Fighting Dog or Animal, Biting or Causing  Injury or Death"
+10090,"Burglary, Warehouse, Unlawful Entry"
+10110,Evading a Police Vehicle or Bicycle
+10115,"Burglary, Residence Under Constr, Att. Forcible"
+10117,"Theft, From Unlocked Vehicle, $50-$200"
+10120,"Assault, Aggravated, W/ Semi Auto"
+10125,"Firearm, Discharging at Occupied Bldg, Vehicle, or Aircraft"
+10140,"Hazardous Materials,  Dump any Substance into Water"
+10145,"Vehicle, Stolen, Bus"
+10149,"Rape, Forcible, W/ Force"
+11011,"Robbery, Att., Service Station, W/ Knife"
+11012,"Theft, From Locked Vehicle, $200-$950"
+11013,"Weapon, Deadly, Exhibiting to Resist Arrest"
+11014,"Burglary, Flat, Unlawful Entry"
+11015,"Robbery, Chain Store, W/ Knife"
+11016,"Hallucinogenic,  Possession For Sale"
+11017,Loitering Around Public Toilet For Lewd Act
+12006,"Penetration, Forced, with Object"
+12008,"Stolen Electronics, Possession"
+12010,Kidnapping during Robbery
+12015,"Weapon, Carrying Concealed"
+12020,"Dog, Stray or Vicious"
+12024,Labor Code Violation
+12025,"Robbery, Att., Bank, W/ Force"
+12026,"Robbery, Att., Street or Public Place, W/ Knife"
+12027,"Fire, Unlawfully Causing"
+12030,"Weapon, Deadly, Imitation or Laser Scope, Exhibiting"
+12040,"Robbery, Att., Service Station, W/ Gun"
+12050,Damage To Mail Box
+12055,"Controlled Substance, Presence Where Used"
+12060,"Theft of Other Property, Att."
+12065,"Rape, Assault To, W/ Sharp Object"
+12070,"Vehicle, Rental, Failure to Return"
+12073,Impersonating Fire Department Member
+12075,Pyrotechnic Explosive Device - Barrel Bomb
+12080,"Robbery, Chain Store, W/ Gun"
+12090,"Suicide By Drowning, Att."
+12100,"Vehicle, Recovered, Motorcycle"
+12110,"Firearm, Negligent Discharge"
+12120,"Firearm, Possession of Loaded"
+12130,"Theft, Short Change, >$950"
+12140,SFMTA Employee-Non Operator/Station Agent-Other Employee
+12150,"VIN, Alter Or Remove"
+12160,"Weapon, Deadly, Carrying with Intent to Commit Assault"
+12161,"Demonstration, Video Evidence, Misc Investigation"
+12163,Lynching by Riot
+12164,"Firearm, Discharging in Grossly Negligent Manner"
+12165,"Destructive Device, Possession of Materials"
+12166,"Theft, Purse Snatch, >$950"
+12167,"Robbery, Att., Street or Public Place, W/ Force"
+12168,Gambling
+12169,"Firearm, Carrying Loaded with Intent to Commit Felony"
+12171,Kidnapping (Adult victim)
+12172,Purchase Female For The Purpose Of Prostitution
+12173,"Firearm, Possession By Prohibited Person"
+13010,Suspicious Package
+13020,Opium Offense
+13030,"Theft, Purse Snatch, Att."
+13045,Suicide
+13050,"Burglary, Other Bldg. Under Constr., Att. Forcible"
+13060,"Weapon, Deadly, Possession of to Violate 136.1 PC"
+13070,"Endless Chain Schemes, Ponzi Schemes"
+13072,Hotel Violations
+13075,"Letters, Opening Sealed"
+13080,"Dog, Fighting;  Owning, Fighting, or Attending Fight"
+13110,"Public Health Order Violation, Notification"
+13111,"Theft, Drunk Roll, $200-$950"
+13115,"Methadone, Possession For Sale"
+13120,Crimes Against Revenue & Property of State
+14020,"Traffic Collision, Hit & Run, Property Damage"
+14030,VIN Switch
+14031,"Robbery, Att., Comm. Establ. W/ Knife"
+14040,"Vehicle, Tampering"
+14041,"Gambling Paraphernalia, Possession"
+14042,"Embezzlement, Grand Theft By Brokers/Agents"
+14043,"Assault, Commission of While Armed"
+14045,"Robbery, Chain Store, W/ Force"
+14052,"Caustic Chemical, Possession"
+14060,"Embezzlement, Grand Theft Private Property"
+14072,"Opiates, Transportation"
+15095,Marijuana Offense
+15097,"Alcoholic Beverage, Procuring Sale of"
+15150,"Alcohol, License Required To Sell"
+15151,False Imprisonment
+15152,"Arson, Vacant Building"
+15153,"Food Stamps, Misuse of"
+15154,"Robbery, Att., Service Station W/ Other Weapon"
+15155,"Burglary, Hotel Room, Unlawful Entry"
+15160,"Checks, Blank or Forged, Fraudulent Possession"
+15161,Suspicious Act Towards Female
+15162,"Vehicle, Stolen, Truck"
+15163,"Stolen Checks, Possession"
+15164,"Theft, Pickpocket, >$950"
+15165,"Burglary, Warehouse Under Constr, Att. Forcible"
+15200,"Sex Offender, Failure To Register for Sexual Assault of Adult"
+15201,Carjacking with Bodily Force
+15300,"Machine Gun or Sawed-off Shotgun, Possession"
+15301,"Burglary, Warehouse Under Constr, Forcible Entry"
+15302,Assault or Attempted Murder Upon Gov't Officers
+15303,"Civil Sidewalks, Violation"
+15400,"Air Gun, Possession"
+15401,"Methadone, Sale"
+15410,Defrauding Gas Station/Taxi Driver
+16010,Loitering Where Narcotics are Sold/Used
+16020,"Burglary, Safe,  Hotel"
+16030,"Vehicle Registration, False Evidence of"
+16040,Homicide
+16050,Discharging Offensive or Injurious Substance in Public Area
+16060,"Marijuana, Possession For Sale"
+16100,Impersonating A Police Officer
+16110,"Theft, From Unlocked Vehicle, <$50"
+16120,"Permit Violation, Sidewalk Sales"
+16130,Incest
+16210,"Robbery,  ATM, Gun"
+16220,"Methamphetamine, Possession For Sale"
+16230,Conspiracy
+16240,"Robbery, Service Station W/ Other Weapon"
+16310,State Code Misdemeanor (general)
+16320,"Drug Lab Apparatus, Possession"
+16410,"Suicide By Fire, Att."
+16420,"Controlled Substance, Transportation"
+16430,"Assault, Aggravated, On Police Officer, W/ Knife"
+16440,"Taxi Fare, Overcharging"
+16510,"Hallucinogenic, Transportation"
+16520,Money Laundering
+16540,"Guide Dog, Interfering with"
+16550,"Homicide, W/ Force"
+16610,"Methamphetamine, Transportation"
+16612,"School or Playground, Loitering About"
+16620,Methadone Offense
+16621,"Narcotics Paraphernalia, Possession of"
+16622,"Cocaine, Possession For Sale"
+16623,"Cocaine, Base/rock, Possession For Sale"
+16624,"Weapon, Taking or Attempting to Take from Peace Officer"
+16625,ATM-related Crime (secondary code only)
+16626,"Malicious Mischief, Annoying/Fictitious Phone Calls"
+16629,"Fireworks, Throw at Person or Discharge in Crowd"
+16630,"Malicious Mischief, Graffiti, Real or Personal Property"
+16632,Opium Derivative Offense
+16634,Escape of Prisoner From Hospital
+16640,"Disturbing The Peace, Commotion"
+16642,"Death, Accidental"
+16645,"Theft, Phone Booth, <$50"
+16646,"Loud Speakers, Unauthorized Use of"
+16650,"Warrant Arrest, Enroute To Dept. Of Corrections"
+16652,"Heroin, Possession For Sale"
+16654,"Opiates, Sale"
+16656,Real Estate Fraud
+16660,"Firearm, Turned In by Public"
+16662,"Controlled Substance, Possession For Sale"
+16664,"Driving, Reckless, with Injury"
+16666,"License Plate, Lost"
+16700,"Cocaine, Transportation"
+16704,Other Offenses Against Public Justice
+16705,"Robbery, Bank, W/ Knife"
+16710,"Controlled Substance, Under the Influence of"
+16711,"Burglary, Safe, Apartment"
+16712,"Delivered Mail, Damage or Destruction of"
+16720,Falsification of Medical Records
+16730,"Civil Sidewalks, Citation"
+16740,"Theft, Pickpocket, $50-$200"
+16760,"Embezzlement, Petty Theft By Brokers/Agents"
+16780,"Identification Card or Drivers License, Falsify or Display"
+17020,"Dog, Barking"
+17030,"Death, Non-manslaughter Vehicle Accident"
+17070,"Telephone or Telegraph Message, Sending False"
+17071,"Assault, Att. Mayhem, W/ Force"
+17072,"Robbery, Att., Residence, W/ Other Weapon"
+17110,"Permit Violation, Advertising Distributors"
+17130,"Vehicle, Open Container Of Alcohol In"
+19010,Threat or Force to Resist Executive Officer
+19015,"Counterfeit/Forgery, Poss Drivers Lic Or Id Card"
+19020,"Burglary, Flat, Forcible Entry"
+19022,Disturbing Religious Meetings
+19024,"Malicious Mischief, Breaking Windows With BB Gun"
+19025,"Malicious Mischief, Tire Slashing"
+19026,Tarasoff Report
+19028,"Robbery, Residence, W/ Gun"
+19030,"Jail Property, Destroying (SFPD only)"
+19031,"Robbery, Bank, W/ Force"
+19032,"Robbery,  ATM, Knife, Att."
+19050,"Robbery, Att., Chain Store, W/ Force"
+19053,Peddling Without A License
+19055,Violation of Emergency Protective Order
+19057,Terrorist Threats
+19058,"Access Card Information, Publication of"
+19060,"Cellular or Cordless Phone Communications, Intercepting"
+19062,Sale of Satellite Telephone Numbers
+19065,"Theft, Phone Booth, >$950"
+19070,Unlawful Assembly
+19072,"Robbery, Att., Bank, W/ Other Weapon"
+19075,"Financial Statements, False"
+19076,"Rape, Assault To, W/ Other Weapon"
+19077,"Firearm, Tampering With Marks"
+19080,Loitering Without Lawful Business With Owner or Occupant
+19081,"Defrauding Providers of Food, Fuel, Services, or Accommodations"
+19082,"Marijuana, Sales"
+19083,"Malicious Mischief, Building Under Constr."
+19084,Human Trafficking (B)-Involuntary Servitude (not sex-related)
+19086,"Homicide, W/ Other Weapon"
+19088,Assault on School Employee
+19089,"Vandalism or Graffiti Tools, Possession"
+19090,Accessory or Aid Or Harbor Felon
+19095,"Burglary, Vehicle (Arrest made)"
+19100,"Rape, Att., W/ Force"
+19400,"Disturbance of Non-religious, Non-political Assembly"
+26010,Harbor & Navigations Code Violation (general)
+26020,"Driving While Under The Influence Of Alcohol, w/Injury"
+26028,"Arson, Commercial Building"
+26029,"Audiovisual (Video or Sound) Recordings, Unauthorized"
+26030,Found Person
+26031,"Robbery, W/ Gun"
+26032,Littering or Dumping that Creates Traffic Hazard
+26034,"Theft of Telecommunication Services, incl. Clone Phone"
+26035,Trespassing On Railroad Trains
+26036,"Manslaughter, Vehicular"
+26037,"Theft, Coin Operated Machine, >$950"
+26038,Begging or Panhandling
+26039,"Identification To Peace Officer, False"
+26040,"Robbery, W/ Other Weapon"
+26050,Sale or Manufacture of Deceptive ID
+26061,Falsifying Judicial & Public Records & Documents
+26062,"Robbery, Vehicle for Hire, Att., W/ Gun"
+26063,"Robbery, Comml. Establ. W/ Weapon"
+26080,"Burglary, Residence, Forcible Entry"
+26095,"Marijuana, Cultivating/Planting"
+26100,"Battery, Of A Police Officer"
+26105,"Suicide, Attempted"
+26120,Violation of Stay Away Order
+26135,Unemployment Insurance Act Violation
+26140,"Embezzlement, Petty Theft Private Property"
+26141,"Warrant Arrest, Enroute To Probation"
+26142,"Burglary, Hotel Room, Forcible Entry"
+26143,"Oral Copulation, Unlawful (Adult Victim)"
+26145,"Access Card Information, Theft of"
+26148,Gun Violence Restraining Order
+26149,"Explosive Device, Located"
+26150,Controlled Substance Offense
+26160,"Dead Body, Removing Items from"
+26170,"Assault, Att. Homicide, W/ Other Weapon"
+26175,"Assault, Att. Mayhem, W/ Gun"
+26176,"Theft, Vehicle Strip, <$50"
+26177,Escape From Hospital With Force
+26178,"Theft, Vehicle Strip, $50-$200"
+26180,"Trade Secrets, Theft or Unauthorized Copying"
+26190,"Suicide By Firearms, Att."
+26200,"Assault, Non-Aggravated, Att."
+26210,"Burglary, Apt Under Constr., Forcible Entry"
+26211,"Rape, Att., W/ Sharp Object"
+26213,"Balloons, Electrically Conductive"
+27010,"Parole Violation, Adult"
+27020,"Assault, Mayhem, W/ Knife"
+27030,Auto Impounded
+27031,"Burglary, Flat Under Constr., Unlawful Entry"
+27040,"Checks, False, Making, Uttering or Possessing"
+27050,"Prescription, Forge Or Alter (4390 B&P)"
+27060,"Checks, Theft/Non-sufficient Funds, Felony"
+27065,Arson of Vehicle
+27066,"Resisting Peace Officer, causing Their Serious Injury or Death"
+27067,"Barbiturates, Transportation"
+27068,"Burglary, Warehouse, Forcible Entry"
+27070,"Theft, Bicycle, <$50, serial number known"
+27071,"Articles With ID Removed, Possession of"
+27072,Accidental Burns
+27080,Lotteries (general)
+27082,School Student or Employee Entering  Campus after Suspension or Dismissal
+27090,"Theft, Trick & Device, Misd."
+27100,"Robbery, Att., Chain Store, W/ Knife"
+27110,"Burglary, Flat, Att. Forcible Entry"
+27120,"Riot, Inciting To"
+27122,"Kidnapping, Attempted (Adult victim)"
+27130,"Burglary, Apartment House, Unlawful Entry"
+27131,"Prescription, Forge Or Alter (11368 H&S)"
+27140,Firearm with Altered Identification
+27145,"Probation Violation, DVU related"
+27155,"Robbery, Att., Residence, W/ Knife"
+27165,False Report of Police Misconduct
+27170,"Vehicle, Stolen, Motorcycle"
+27171,"Robbery, Residence, W/ Other Weapon"
+27172,Driving While Under The Influence Of Drugs
+27173,"Assault, Mayhem, W/ Other Weapon"
+27174,"Animal, Poisoning of"
+27175,"Burglary, Non-residential, Forcible Entry"
+27176,"Public Nuisance, Committing"
+27177,"Malicious Mischief, Adult Suspect"
+27185,"Fireworks, Possession of any within SF,  incl. ""Safe & Sane"""
+27195,"Burglary, Apartment House, Forcible Entry"
+27196,"Embezzlement, Grand Theft By Property Carrier"
+27197,"Soliciting, Aggressive"
+27198,"Embezzlement, Grand Theft Leased Property"
+27199,Escape or Assisting Escape
+27200,Fire Code Violation (general)
+27201,"Hazardous Materials, Dumping in Unauthorized Location"
+27210,"Firearm Transfer, Violation"
+27220,"Alcohol, Sale Of After Hours"
+27300,Amphetamines Offense
+27400,"Burglary, Flat Under Constr., Att. Forcible"
+27401,"Theft, Motorcycle Strip, <$50"
+28010,Cocaine Offense
+28020,"Vehicle, Recovered, Mobile Home or House Trailer"
+28030,"Robbery, Service Station, W/ Gun"
+28040,"Controlled Substance Violation, Loitering for"
+28050,Assault During Labor Dispute
+28060,"Burglary, Safe, Other, with Explosives"
+28080,"Checks, Making or Uttering with Insufficient Funds"
+28092,Disturbing The Peace
+28100,Municipal Code Violation (general)
+28102,"Theft, Coin Operated Machine, $200-$950"
+28103,"Phone Calls, Harassing, to 911"
+28110,Parole Search
+28120,"Sexual Assault, Administering Drug to Commit"
+28130,Located Property
+28135,"Theft, Shoplifting, >$950"
+28136,"Alcohol, Furnish or Sell to Intox. Person"
+28140,"Malicious Mischief, Street Cars/Buses"
+28150,"Vehicle, Stolen & Recovered"
+28160,"Malicious Mischief, Vandalism to Vehicle"
+28161,Suspicious Vehicle
+28164,Stalking
+28165,Counterfeit Money or Coins
+28166,Vandalism or Graffiti on or within 100 ft of Highway
+28167,Engaging In Lewd Act
+28168,"Driving, Failure To Heed Red Light And Siren"
+28169,"Theft, False Pretenses, Misd."
+28170,"Arson, Portable Toilet"
+28180,"Cable TV Connection or Decoding Device, Unauthorized"
+28181,"Embezzlement, Petty Theft By Employee"
+30000,"Conceal Crime or Withhold Evidence, Accepting Payment to"
+30006,"Parking Meters, Damage to"
+30007,Phone Calls in Violation of DVU Court Order
+30009,"Heroin, Transportation"
+30010,"Theft, Pickpocket, Attempted"
+30011,"Permit Violation, Dance Hall"
+30020,Impersonating Public Utility Member
+30030,"Burglary, Other Bldg. Under Constr., Forcible Entry"
+30070,"Robbery,  ATM, Gun, Att."
+30080,Municipal Police Code Violation (general)
+30110,"Drug Offender, Presence  near School Grounds"
+30120,Lodging in Park
+30130,"Theft, Petty, with Prior Conviction"
+30131,"Disaster Area, Entering or Remaining in"
+30140,"Robbery, Residence, W/ Force"
+30150,"Assault, Att. Mayhem, W/ Knife"
+30155,Gang Related (secondary only)
+30160,"Embezzlement, Grand Theft Public/Private Official"
+30170,"Theft, Grand, of Firearm"
+30180,Pandering
+30190,"Access Card, Possession of Lost or Stolen, with Intent to Use, Transfer, or Sell"
+30191,"Embezzlement, Grand Theft By Collector"
+30192,"Assault, Att. Homicide, Explosives"
+30200,"Firearm, Discharging Within City Limits"
+30205,"Prisoner, Rescuing From Lawful Custody"
+30206,"Wiretaps, Unauthorized"
+30210,"Dissuading Witness, Victim"
+31000,"Theft, Trick And Device, Felony"
+51010,"Rape, Forcible, W/ Other Weapon"
+51020,"Weapon, Possess or Bring Other on School Grounds"
+51030,"Phone Calls, Obscene"
+51040,"Robbery, Att., W/ Gun"
+51041,"Burglary, Safe,  Store"
+51050,Probation Violation
+60010,"Burglary, Warehouse, Att. Forcible Entry"
+60020,"Rape, Forcible, W/ Sharp Object"
+60030,"Rape, Att., W/ Gun"
+60040,"Homicide, Excusable, W/ Sharp Object"
+60050,"Insured Property, Destruction to Defraud Insurer"
+60060,"Burglary, Apt Under Constr., Unlawful Entry"
+60070,"Suicide By Laceration/Stabbing, Att."
+60080,"Theft, False Pretenses, Felony"
+60090,Maintaining A Public Nuisance
+60110,"Theft, Drunk Roll, $50-$200"
+60120,Terrorizing by Interfering with Religious Worship
+60150,Theft from Merchant or Library
+60160,Soliciting or Engaging In Lewd Conduct
+60170,Embezzlement (general)
+60180,"Loitering, Obstructing"
+60190,"Theft, Purse Snatch, <$50"
+61010,"School Campus, Remaining Without Consent"
+61020,"Driving While Under The Influence Of Drugs, w/Injury"
+61030,"Death Report, Cause Unknown"
+61040,Opiates Offense
+62010,"Theft, From Locked Vehicle, <$50"
+62020,Courtesy Report
+62030,"Warrant Arrest, Enroute To Parole"
+62040,Carjacking with a Dangerous Weapon
+62050,"Warrant Arrest, Enroute To Outside Jurisdiction"
+62060,"Warrant Arrest, Enroute To Adult Authority"
+62070,Unusual Occurrence
+62071,"Robbery, Chain Store, W/ Other Weapon"
+62072,"Assault, Att. Homicide, W/ Gun"
+63010,"Warrant Arrest, Local SF Warrant"
+64000,"Assault, Mayhem, W/ Gun"
+64001,"Opium, Possession For Sale"
+64002,"Dog or Cat, Abandonment of"
+64003,Manufacture or Sale of Counterfeit Goods
+64010,"Malicious Mischief, Vandalism to Property"
+64011,Firearm Possession in School Zone
+64012,Lodging Without Permission
+64013,Soliciting to Visit House Of Prostitution
+64015,"Burglary, Residence Under Constr, Forcible Entry"
+64017,"Public Health Order Violation, After Notification"
+64018,"Robbery, Vehicle for Hire, Att., W/ Other Weapon"
+64020,Mental Health Detention
+64030,Suicide By Firearms
+64040,"Explosives, Illegal Transportation"
+64060,"Theft, From Person, $200-$950 (other than Pickpocket)"
+64065,Case Closure
+64070,Suspicious Occurrence
+64072,"Theft, From Building, $50-$200"
+64080,Suspicious Person
+64085,Investigative Detention
+64090,Embezzlement from Dependent or Elder Adult by Caretaker
+64100,"Interfering, W/ Police Officer"
+65010,Traffic Violation Arrest
+65013,Theft of Written Instrument
+65014,"Burglary, Residence Under Constr, Unlawful Entry"
+65015,"Vehicle, Misplaced"
+65016,"Driving, License Suspended or Revoked"
+65020,"Obstructions On Streets, Sidewalks"
+65021,"Theft, Lost Property, Petty"
+65030,"Robbery, Comml. Establ. W/ A Knife"
+65040,"Embezzlement, Grand Theft By Employee"
+65050,"Theft, From Building, >$950"
+65055,"Firefighter, Interfering with"
+65056,"Vehicle, Embezzled"
+65057,"Stolen Cellular Phone, non-cloned, Possession"
+65060,"Weapon, Tear Gas, Possession by Prohibited Persons"
+65070,Retaking Goods from Peace Officer
+65080,"Civil Sidewalks, Booking"
+66010,"Aided Case, Injured or Sick Person"
+66030,"Theft, Drunk Roll, <$50"
+66040,"Narcotics Addict, Failure To Register"
+66050,"Burglary, Hotel Room, Att. Forcible Entry"
+68000,Fire Report
+68020,"License Plate, Found"
+68021,"Theft, Purse Snatch, $50-$200"
+68030,"Robbery, Street or Public Place, W/ Knife"
+68050,"Theft, From Building, <$50"
+68053,Violation of Civil Gang Injunction
+68055,Obscene Movies or Acts
+68057,"Assault, Mayhem, W/ Force"
+68060,"Burglary, Other Bldg., Att. Forcible Entry"
+68069,State Code Felony (general)
+71000,Lost Property
+71010,"Burglary, Apt Under Constr., Att. Forcible"
+71011,"Theft, Other Property, $200-$950"
+71012,"License Plate, Recovered"
+71013,Arson
+71019,Perjury
+71024,"Burglary Tools, Possession Of"
+72000,Found  Property
+72023,"Records or Returns, False Entries"
+73000,"Suicide By Jumping, Att."
+73001,"Marijuana, Furnishing"
+73010,Indecent Exposure (Adult victim)
+74000,"Opiates, Possession For Sale"
+74020,"Theft, Trick And Device, Att."
+74022,"School, Public, Trespass"
+74024,"Heroin, Sales"
+75000,"Phone Calls, Harassing"
+75011,"Firearm Silencer, Possession"
+75025,"Checks or Legal Instruments, Uttering Forged"
+75030,"Alcohol, Under Influence Of In Public Place"
