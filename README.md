@@ -1,6 +1,6 @@
 # Project 1: Exploratory Data Analysis
 ### UC Berkeley Data Analytics Bootcamp 2023
-
+**Title:** San Francisco Crime Report (2018 - 2023)
 **Co-authors:** Brandon Ingalz, Michael Jardinico, Anushya Mani, Diahann Castellon, Jimmy Nguyen, Roland Abellano  
 **Version:** 1.0  
 **Date Created:** 11/10/2023
@@ -346,7 +346,7 @@ Follow these steps to set up the project environment:
     newcode_clean_org.reset_index()
     ```
 
-26. Micro analysis of McLaren Park/Amazon-Crocker Neighborhood: the "safest" neighborhood in San Francisco (oland Abellano's analysis of McLaren Neighborhood)
+26. Micro analysis of McLaren Park/Amazon-Crocker Neighborhood: the "safest" neighborhood in San Francisco (Roland Abellano's analysis of McLaren Neighborhood)
 
     ```
     Based on the article, "The 15 Safest Neighborhoods In San Francisco", by Jessica Stone in the website, Upgraded Homes, Crocker-Amazon was one of the 15 safest neighborhood on San Francisco. As a local San Franciscan living only a mile east of Crocker-Amazon neighborhood, I have a personal stake at the accuracy of what Ms. Stone's article is claiming. I would like to find out if District 10, where Amazon-Crocker and my local neighborhood, Bayview, have significant crime rate rating difference in comparison to the rest of San Francisco.
