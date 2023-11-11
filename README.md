@@ -57,8 +57,10 @@ Follow these steps to set up the project environment:
 7. Count the number of neighborhood based on the San Francisco "Police Department Incident Reports: 2018 to Present" dataset. There should be a total of 41 neighborhoods.
 
     #### Count the total number of neighborhoods:
+    ```
     number_of_hoods = sf_orig_df['Analysis Neighborhood'].nunique()
     print(f"San Francisco, according to \"Police Department Incident Reports: 2018 to Present\" dataset, has {number_of_hoods} neighborhoods)
+    ```
 
 
 8. The dataframe, sf_by_neighborhood_ct, consist of stats grouped by 'Analysis Neighborhood'
@@ -326,4 +328,203 @@ Follow these steps to set up the project environment:
     sf_orig_new
     ```
 
-24. 
+24. Create and display a DataFrame showing the 'New Incident Code' column
+    ```
+    newcode_clean= sf_orig_new.loc[(sf_orig_new['New Incident Code']<=106)]
+    newcode_clean.head(50)
+    ```
+
+25. Group by Neighborhood, year, incident type, incident type 
+    ```
+    newcode_clean_org = pd.DataFrame(newcode_clean.groupby(['Analysis Neighborhood','Incident Year','New Incident Code']).count())
+    newcode_clean_org= newcode_clean_org.sort_values(by = ['Analysis Neighborhood','Incident Year'])
+
+    newcode_clean_org.head(50)
+
+    newcode_clean_org.reset_index()
+    ```
+
+26. Micro analysis of McLaren Park/Amazon-Crocker Neighborhood: the "safest" neighborhood in San Francisco (oland Abellano's analysis of McLaren Neighborhood)
+
+    ```
+    Based on the article, "The 15 Safest Neighborhoods In San Francisco", by Jessica Stone in the website, Upgraded Homes, Crocker-Amazon was one of the 15 safest neighborhood on San Francisco. As a local San Franciscan living only a mile east of Crocker-Amazon neighborhood, I have a personal stake at the accuracy of what Ms. Stone's article is claiming. I would like to find out if District 10, where Amazon-Crocker and my local neighborhood, Bayview, have significant crime rate rating difference in comparison to the rest of San Francisco.
+
+    Website link: https://upgradedhome.com/safest-neighborhoods-in-san-francisco/
+       
+    ```
+    #### Null Hypothesis: Crocker Amazon is considered the safest neighborhood in the city.
+
+    ```
+    # Extract the unique values from the 'Analysis Neighborhood' column
+    unique_neighborhoods = sf_orig_df['Analysis Neighborhood'].unique()
+
+    # Create a new DataFrame with the unique neighborhoods
+    unique_neighborhoods_df = pd.DataFrame(unique_neighborhoods, columns=['Unique Neighborhoods'])
+
+    unique_neighborhoods_df   
+        
+    ```
+
+27. Show the crime rate of the 40 neighborhoods in San Francisco for the Year 2020
+    ```
+    # Filter data for 'Incident Year' 2020
+    crimes_2020 = sf_orig_df[sf_orig_df['Incident Year'] == 2020]
+
+    # Group by 'Analysis Neighborhood' and count unique 'Incident ID'
+    neighborhood_counts = crimes_2020.groupby('Analysis Neighborhood')['Incident ID'].nunique().sort_values()
+
+    # Print or use the results as needed
+    print(neighborhood_counts)
+
+    # Print analysis
+    print(f"\nThe neighborhood with the LOWEST CRIME INCIDENT in the year 2020 is {neighborhood_counts.idxmin()}")
+    ```
+
+28. Show a line graph indicating the number of crime incidents in McLaren Park/Crocker-Amazon for Year 2020. Spoiler Alert: Monday seems to be the day when the most crimes were committed in McLaren Park/Crocker-Amazon for the year 2020
+
+    ```
+    # Analyze data to show what day of the week is crime commited the most in McLAren Park/Cro
+    # Filter data for McLaren Park and the year 2020
+    mclaren_park_2020_data = sf_orig_df[(sf_orig_df['Analysis Neighborhood'] == 'McLaren Park') & (sf_orig_df['Incident Year'] == 2020)]
+
+    # Group data by day of the week and calculate the total number of crimes
+    crimes_per_day_2020 = mclaren_park_2020_data['Incident Day of Week'].value_counts().sort_index()
+
+    # Define the order of days for proper sorting in the line graph
+    days_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
+    # Create a line graph
+    plt.figure(figsize=(10, 6))
+    crimes_per_day_2020[days_order].plot(marker='o', linestyle='-', color='b')
+    plt.title('Total Number of Crimes in McLaren Park per Day of the Week (2020)')
+    plt.xlabel('Day of the Week')
+    plt.ylabel('Number of Crimes')
+    plt.grid(True)
+    plt.show()
+    ```
+
+29. For the sake of comparison, show the same week-long crime trend for McLaren Park/Crocker Amazon for a period of 5 years (2018-2023). Spoiler Alert: From year 2018 to year 2023, Friday seems to be the day when most crimes were committed in McLaren Park/Crocker-Amazon neighborhood
+
+    ```
+    # Filter data for McLaren Park
+    mclaren_park_data_2018_2023 = sf_orig_df[sf_orig_df['Analysis Neighborhood'] == 'McLaren Park']
+
+    # Group data by day of the week and calculate the total number of crimes
+    crimes_per_day_2018_2023 = mclaren_park_data_2018_2023['Incident Day of Week'].value_counts().sort_index()
+
+    # Define the order of days for proper sorting in the line graph
+    days_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
+    # Create a line graph
+    plt.figure(figsize=(10, 6))
+    crimes_per_day_2018_2023[days_order].plot(marker='o', linestyle='-', color='b')
+    plt.title('Total Number of Crimes in McLaren Park per Day of the Week: 2018-2023')
+    plt.xlabel('Day of the Week')
+    plt.ylabel('Number of Crimes')
+    plt.grid(True)
+    plt.show()
+    ```
+
+30. Show the types of crime committed in McLaren Park/Crocker-Amazon from year 2018 to 2023. Spoiler Alert: Larceny-Theft is the most committed crime in McLaren Park/Crocker-Amazon from 2018-2023
+
+```
+mclaren_park_data_incident_types = sf_orig_df[(sf_orig_df['Analysis Neighborhood'] == 'McLaren Park') & (sf_orig_df['Incident Year'].between(2018, 2023))]
+
+# Count the occurrences of each incident category
+incident_category_counts = mclaren_park_data_incident_types['Incident Category'].value_counts()
+
+# Print the result
+print("Incident Categories and Counts in McLaren Park/Crocker-Amazon from 2018 to 2023:")
+print(incident_category_counts)
+
+# Print total incident count
+total_incident_count_mclaren = mclaren_park_data_incident_types.shape[0]
+print(f"\nTotal Incident Count in McLaren Park/Crocker-Amazon from 2018 to 2023: {total_incident_count_mclaren}")
+
+# Total incident count for all of San Francisco
+total_sf_incident_count_sf = sf_orig_df.shape[0]
+print(f"\nTotal Incident Count in San Francisco from 2018 to 2023: {total_sf_incident_count_sf}")
+
+# Calculate McLaren Park incident percentage over SF incidents from 2018 to 2023
+# and compare it to the rest of San Francisco
+
+mclaren_percentage_2018_2020 = (total_incident_count_mclaren / total_sf_incident_count_sf) * 100
+
+print(f"The percentage of Mclaren Park/Crocker-Amazon incidents in comparison to the entire city of San Francisco from 2018 to 2023 is {mclaren_percentage_2018_2020})
+```
+
+31. Filter the incidents for McLaren Park/Crocker-Amazon and compare to the rest of San Francisco
+    ```
+    # Filter incidents for McLaren Park/Crocker-Amazon
+    mclaren_park_data = sf_orig_df[(sf_orig_df['Analysis Neighborhood'] == 'McLaren Park') & (sf_orig_df['Incident Year'].between(2018, 2023))]
+
+    # Filter incidents for the rest of San Francisco
+    rest_of_sf_data = sf_orig_df[(sf_orig_df['Analysis Neighborhood'] != 'McLaren Park') & (sf_orig_df['Incident Year'].between(2018, 2023))]
+
+    # Calculate percentages
+    total_sf_incidents = sf_orig_df[(sf_orig_df['Incident Year'].between(2018, 2023))].shape[0]
+    percentage_mclaren_park = (mclaren_park_data.shape[0] / total_sf_incidents) * 100
+    percentage_rest_of_sf = (rest_of_sf_data.shape[0] / total_sf_incidents) * 100
+
+    # Print the results
+    print(f"Percentage of Incidents in McLaren Park/Crocker-Amazon from 2018 to 2023: {percentage_mclaren_park:.2f}%")
+    print(f"Percentage of Incidents in Rest of SF from 2018 to 2023: {percentage_rest_of_sf:.2f}%")
+
+    ```
+
+32. To show a bit of comparison with McLaern Park/Crocker Amazon's crime rate for the year 2020, show the neighborhood that has the most crime committed in San Francisco in the same year
+
+    ```
+    # Filter incidents for the year 2020
+    sf_2020_data = sf_orig_df[sf_orig_df['Incident Year'] == 2020]
+
+    # Group by neighborhood and count incidents
+    neighborhood_crime_count = sf_2020_data.groupby('Analysis Neighborhood').size().reset_index(name='Incident Count')
+
+    # Find the neighborhood with the highest crime count
+    highest_crime_neighborhood = neighborhood_crime_count.loc[neighborhood_crime_count['Incident Count'].idxmax()]
+
+    # Print the result
+    print(f"The neighborhood with the highest crime rate in 2020 is: {highest_crime_neighborhood['Analysis Neighborhood']}")
+    print(f"Total incidents in {highest_crime_neighborhood['Analysis Neighborhood']} in 2020: {highest_crime_neighborhood['Incid
+    ```
+
+33. Based on the DataSF dataset, the Tenderloin, a neighborhood in the heart of San Francisco, considered to be the grittiest place in the enture city, is the neighrhood with the most crime in the Year 2020
+    ```
+    # Filter incidents for the year 2020
+    sf_2020_data = sf_orig_df[sf_orig_df['Incident Year'] == 2020]
+
+    # Group by neighborhood and count incidents
+    neighborhood_crime_count = sf_2020_data.groupby('Analysis Neighborhood').size().reset_index(name='Incident Count')
+
+    # Find the neighborhood with the highest crime count
+    lowest_crime_neighborhood = neighborhood_crime_count.loc[neighborhood_crime_count['Incident Count'].idxmin()]
+
+    # Print the result
+    print(f"The neighborhood with the highest crime rate in 2020 is: {lowest_crime_neighborhood['Analysis Neighborhood']}")
+    print(f"Total incidents in {lowest_crime_neighborhood['Analysis Neighborhood']} in 2020: {lowest_crime_neighborhood['Incident Count']})
+
+    ```
+
+34. Create a line chart that shows how McLaren Park/Crocker-Amazon's crime rate stacks up against the Tenderloin, the crittiest part of San Francisco, and two of the most expensive neighborhoods in the city, Marina District, and Pacific Heights
+    ```
+    # Group data by "Incident Year" and "Analysis Neighborhood"
+    grouped_data = sf_orig_df.groupby(['Incident Year', 'Analysis Neighborhood']).size().reset_index(name='Incident Count')
+
+    # Filter data for selected neighborhoods
+    selected_neighborhoods = ['McLaren Park', 'Tenderloin', 'Marina', 'Pacific Heights', ]
+    filtered_data = grouped_data[grouped_data['Analysis Neighborhood'].isin(selected_neighborhoods)]
+
+    # Pivot data for plotting
+    pivot_data = filtered_data.pivot(index='Incident Year', columns='Analysis Neighborhood', values='Incident Count')
+
+    # Plot the line graph
+    pivot_data.plot.line(marker='o', figsize=(10, 6))
+    plt.title('Crime Incidents from 2018 to 2023 - McLaren Park vs Marina vs Pacific Heights')
+    plt.xlabel('Incident Year')
+    plt.ylabel('Incident Count')
+    plt.legend(title='Neighborhood')
+    plt.grid(True)
+    plt.show()
+    ```
+
