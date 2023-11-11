@@ -8,6 +8,8 @@
 ## Description
 At SafetyNet Analytics Group, we recognize the prevalent issue of crime in San Francisco, a reality many of us have come to know through various channels such as media reports, word or mouth, and personal experiences, or anecdotes. Our investigation is primarily anchored in a study by "Upgraded Home," which identifies 15 neighborhoods in San Francisco as being the safest. Our objective is to delve deeper into the state of crime in the city by examining geospatial data related to criminal activities. This analysis aims to provide insightful assessments for those considering residency in the area, highlighting neighborhoods with the highest and lowest crime rates. Additionally, we will present trends observed in criminal activities over a span of five years..
 
+## Analysis ##
+**SafetyNet's** [San Francisco Crime Report (2018-2023) ](https://github.com/rabellan/SafetyNet/blob/main/Group%203%20Project%20-%20SafetyNet.pdf)
 
 ## Installation
 Before running the project, ensure the following libraries are installed in your Python environment:
