@@ -59,7 +59,7 @@ Follow these steps to set up the project environment:
     #### Count the total number of neighborhoods:
     ```
     number_of_hoods = sf_orig_df['Analysis Neighborhood'].nunique()
-    print(f"San Francisco, according to \"Police Department Incident Reports: 2018 to Present\" dataset, has {number_of_hoods} neighborhoods)
+    print(f"San Francisco, according to \"Police Department Incident Reports: 2018 to Present\" dataset, has {number_of_hoods} neighborhoods")
     ```
 
 
@@ -154,8 +154,9 @@ Follow these steps to set up the project environment:
     ```
 
 14. Write the result of the sorted codes into a csv file for further analysis
+    ```
     unique_codes_sorted.to_csv("unique_codes_sorted.csv", index=False)
-
+    ```
 
 15. Group the keywords in the SF Incident Description as Violent Crime
     ```
@@ -208,6 +209,7 @@ Follow these steps to set up the project environment:
 
     # Collect the corresponding "SF Incident Code" and save to a variable
     white_collar_codes = white_collar_group["Incident Code"].tolist()
+
 
     # Display the results:
     print(f"Total number of White collar crime type: {len(white_collar_codes)} of 840")
@@ -276,7 +278,7 @@ Follow these steps to set up the project environment:
 
     ```
 
-21. Incident Code Assignment:
+21. Categorize the 840 unique incidents types into six (6) New Incident Code in the following:
     - 101 - Violent Crime
     - 102 - Property Crime
     - 103 - White Collar Crime
@@ -528,3 +530,4 @@ print(f"The percentage of Mclaren Park/Crocker-Amazon incidents in comparison to
     plt.show()
     ```
 
+*** END OF CODE ***
