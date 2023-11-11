@@ -25,13 +25,13 @@ Follow these steps to set up the project environment:
 1. Create a new repository on GitHub named `SafetyNet`.
 2. Clone the repository to your local machine.
 3. Within your local repository, create a following:
-    ### IMPORTANT:  The main code file is "RA_Cleaned_CSV_ASMAnalysis_Oct22.ipynb"
+    #### IMPORTANT:  The main code file is "RA_Cleaned_CSV_ASMAnalysis_Oct22.ipynb"
     ```
     - RA_Cleaned_CSV_ASMAnalysis_Oct22.ipynb (You can rename it as per your preference).
     - .gitignore 
     ```
-4. Download and save the dataset in .csv and save to the root folder
-   link:  
+4. Download and save the csv dataset in the root directory from the following link. 
+   #### IMPORTANT: The file, which is approximately 225MB in size, is stored on the Git LFS server. It is available for download only in plain text format. You can then choose to convert it into a .csv file using Excel or another similar application.
    https://github.com/rabellan/SafetyNet/blob/main/SF_Crime_Data_from_2018_to_Present_CLEANED.csv 
 
 5. Start by loading dependencies and settings inside `RA_Cleaned_CSV_ASMAnalysis_Oct22.ipynb` 
@@ -47,24 +47,23 @@ Follow these steps to set up the project environment:
     import requests
     ```
 
-6. Set path to the .csv file 
+6. Set the path to the .csv file 
     ```
     sf_orig_clean = Path("SF_Crime_Data_from_2018_to_Present_CLEANED.csv")
     sf_orig_df = pd.read_csv(sf_orig_clean)
     sf_orig_df.tail()
     ```
 
-7. San Francisco, according to "Police Department Incident Reports: 2018 to Present" dataset, has 41 neighborhoods
+7. Count the number of neighborhood based on the San Francisco "Police Department Incident Reports: 2018 to Present" dataset. There should be a total of 41 neighborhoods.
 
-    #### count total number of neighborhoods:
+    #### Count the total number of neighborhoods:
     number_of_hoods = sf_orig_df['Analysis Neighborhood'].nunique()
     print(f"San Francisco, according to \"Police Department Incident Reports: 2018 to Present\" dataset, has {number_of_hoods} neighborhoods)
 
 
 8. The dataframe, sf_by_neighborhood_ct, consist of stats grouped by 'Analysis Neighborhood'
 
-    #### Acounting total number of incidents by neighborhood
-    #### group by 1 variable
+    #### Acount the total number of incidents by neighborhood and group by 1 variable
     ```
     sf_by_neighborhood_ct=pd.DataFrame(sf_orig_df.groupby('Analysis Neighborhood').count())
     sf_by_neighborhood_ct
