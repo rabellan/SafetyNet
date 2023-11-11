@@ -25,15 +25,16 @@ Follow these steps to set up the project environment:
 1. Create a new repository on GitHub named `SafetyNet`.
 2. Clone the repository to your local machine.
 3. Within your local repository, create a following:
+    ### IMPORTANT:  The main code file is "RA_Cleaned_CSV_ASMAnalysis_Oct22.ipynb"
     ```
-    - SF_Crime_Analysis_2022.ipynb 
+    - RA_Cleaned_CSV_ASMAnalysis_Oct22.ipynb (You can rename it as per your preference).
     - .gitignore 
     ```
 4. Download and save the dataset in .csv and save to the root folder
    link:  
    https://github.com/rabellan/SafetyNet/blob/main/SF_Crime_Data_from_2018_to_Present_CLEANED.csv 
 
-4. Start by loading dependencies and settings inside `SF_Crime_Analysis_2022.ipynb` 
+5. Start by loading dependencies and settings inside `RA_Cleaned_CSV_ASMAnalysis_Oct22.ipynb` 
     ```
     import pandas as pd
     from pathlib import Path
@@ -46,21 +47,21 @@ Follow these steps to set up the project environment:
     import requests
     ```
 
-5. Set path to the .csv file 
+6. Set path to the .csv file 
     ```
     sf_orig_clean = Path("SF_Crime_Data_from_2018_to_Present_CLEANED.csv")
     sf_orig_df = pd.read_csv(sf_orig_clean)
     sf_orig_df.tail()
     ```
 
-6. San Francisco, according to "Police Department Incident Reports: 2018 to Present" dataset, has 41 neighborhoods
+7. San Francisco, according to "Police Department Incident Reports: 2018 to Present" dataset, has 41 neighborhoods
 
     #### count total number of neighborhoods:
     number_of_hoods = sf_orig_df['Analysis Neighborhood'].nunique()
     print(f"San Francisco, according to \"Police Department Incident Reports: 2018 to Present\" dataset, has {number_of_hoods} neighborhoods)
 
 
-7. The dataframe, sf_by_neighborhood_ct, consist of stats grouped by 'Analysis Neighborhood'
+8. The dataframe, sf_by_neighborhood_ct, consist of stats grouped by 'Analysis Neighborhood'
 
     #### Acounting total number of incidents by neighborhood
     #### group by 1 variable
@@ -69,14 +70,14 @@ Follow these steps to set up the project environment:
     sf_by_neighborhood_ct
     ```
 
-8. Group the total number of incidents per year
+9. Group the total number of incidents per year
     ```
     sf_by_year_ct= pd.DataFrame(sf_orig_df.groupby('Analysis Neighborhood').count())
     df_sort=sf_by_year_ct.sort_values('Incident Datetime',ascending = True)[['Incident Datetime','Incident Year']][:15]
     df_sort
     ```
 
-9. Count the total number of incidents by neighborhood, by year
+10. Count the total number of incidents by neighborhood, by year
     ```
     sf_neigh_yr = pd.DataFrame(sf_orig_df.groupby(['Analysis Neighborhood','Incident Year']).count())
     new= sf_orig_df.sort_values(by = ['Analysis Neighborhood','Incident Year'])
@@ -85,14 +86,14 @@ Follow these steps to set up the project environment:
     df    
     ```
 
-10. Group the total number of incidents per year per neighborhood
+11. Group the total number of incidents per year per neighborhood
     ```
     sf_by_year_ct= pd.DataFrame(sf_orig_df.groupby('Analysis Neighborhood').count())
     sf_by_year_ct.sort_values('Incident Datetime',ascending = False)
     sf_by_year_ct
     ```
 
-11. Create a line chart of Least Crime for Incident Year Vs. Total Incidents from 2018 - 2023 
+12. Create a line chart of Least Crime for Incident Year Vs. Total Incidents from 2018 - 2023 
     ```
     count =0
     top_five=[]
@@ -110,7 +111,7 @@ Follow these steps to set up the project environment:
     
     ```
 
-12. Create a DataFrame that shows the unique crime code based on the 'Incident Code' and 'Incident Description' column
+13. Create a DataFrame that shows the unique crime code based on the 'Incident Code' and 'Incident Description' column
     ```
     unique_crime_codes = unique_crime_codes = sf_orig_df["Incident Code"].unique()
     unique_crime_description = sf_orig_df["Incident Description"].unique()
@@ -151,11 +152,11 @@ Follow these steps to set up the project environment:
     unique_codes_sorted.head(50)
     ```
 
-13. Write the result of the sorted codes into a csv file for further analysis
+14. Write the result of the sorted codes into a csv file for further analysis
     unique_codes_sorted.to_csv("unique_codes_sorted.csv", index=False)
 
 
-14. Group the keywords in the SF Incident Description as Violent Crime
+15. Group the keywords in the SF Incident Description as Violent Crime
     ```
     violent_crime_keywords = ["suicide","assault","rape", "homicide", "shooting", "incest",\ 
                               "kidnapping", "death","sexual assault", "manslaughter",\
@@ -175,7 +176,7 @@ Follow these steps to set up the project environment:
 
     ```
 
-15. Group the keywords in the SF Incident Description as Property Crime
+16. Group the keywords in the SF Incident Description as Property Crime
     ```
     property_crime_keywords = ["robbery", "burglary","theft","larceny", \
                             "access card","carjacking", "extortion","contraband","arson","fire","auto",\
@@ -195,7 +196,7 @@ Follow these steps to set up the project environment:
 
     ```
 
-16. Group the keywords in the SF Incident Description as White Collor Crime
+17. Group the keywords in the SF Incident Description as White Collor Crime
     ```
     white_collar_crime = ["fraud","embezzlement","personation", "impersonation","counterfeit",\
                           "imperson","counterfeiting","falsify","false","permit","forgery",\ "cryptocurrency","fraudulent"]
@@ -213,7 +214,7 @@ Follow these steps to set up the project environment:
     print(f"Incident Code: {white_collar_codes}")
     ```
 
-17. Group the keywords in the SF Incident Description as Drug and Alcolhol Crime
+18. Group the keywords in the SF Incident Description as Drug and Alcolhol Crime
     ```
     drug_alcohol_crime = ["drug","alcohol","opiates","opium", "methamphetamine","needle",\
                           "barb","ingest","narcotic","marijuana","cocaine","substance",\
@@ -234,7 +235,7 @@ Follow these steps to set up the project environment:
     ```
 
 
-18. Group the keywords in the SF Incident Description as Hate Crime
+19. Group the keywords in the SF Incident Description as Hate Crime
     ```
     hate_crime = ["threat","hate","swear", "peace", "riot","conspiracy","place of worship"]
 
@@ -251,7 +252,7 @@ Follow these steps to set up the project environment:
     print(f"Incident Code: {hate_crime_codes}")
     ```
 
-19. Group the keywords in the SF Incident Description as Quality of Life Disruptions
+20. Group the keywords in the SF Incident Description as Quality of Life Disruptions
     ```
     quality_life_disrupt = ["biting","disrupt","swear", "graffiti", "trespass","vandal","mischief","animal","loit",\
                             "unusual","against","disorderly","traffic","warrant","weapon","malicious",\
@@ -274,7 +275,7 @@ Follow these steps to set up the project environment:
 
     ```
 
-20. Incident Code Assignment:
+21. Incident Code Assignment:
     - 101 - Violent Crime
     - 102 - Property Crime
     - 103 - White Collar Crime
@@ -282,7 +283,7 @@ Follow these steps to set up the project environment:
     - 105 - Hate Crime
     - 106 - Quality-of-life Crime
 
-21. Based on above code assignment create a column 'New Incident ID' in the DataFrame
+22. Based on above code assignment create a column 'New Incident ID' in the DataFrame
     ```
     # Initialize "New Incident ID" with original values
     sf_orig_df["New Incident Code"] = sf_orig_df['Incident Code']
@@ -317,7 +318,7 @@ Follow these steps to set up the project environment:
     display(sf_orig_df.head(50))
     ```
 
-22. Create a DataFrame that shows ['New Incident Code', 'Incident Datetime', 'Incident Date', 
+23. Create a DataFrame that shows ['New Incident Code', 'Incident Datetime', 'Incident Date', 
     'Incident Time', 'Incident Year', 'Analysis Neighborhood']
     ```
     sf_orig_new= sf_orig_df[['New Incident Code','Incident Datetime','Incident Date','Incident Time','Incident Year','Analysis Neighborhood']]
@@ -326,4 +327,4 @@ Follow these steps to set up the project environment:
     sf_orig_new
     ```
 
-23. 
+24. 
