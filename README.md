@@ -1,6 +1,6 @@
 # Project 1: Exploratory Data Analysis
 ### UC Berkeley Data Analytics Bootcamp 2023
-**Title:** San Francisco Crime Report (2018 - 2023)
+#### Title: San Francisco Crime Report (2018 - 2023)
 **Co-authors:** Brandon Ingalz, Michael Jardinico, Anushya Mani, Diahann Castellon, Jimmy Nguyen, Roland Abellano  
 **Version:** 1.0  
 **Date Created:** 11/10/2023
