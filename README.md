@@ -348,7 +348,10 @@ Follow these steps to set up the project environment:
     newcode_clean_org.reset_index()
     ```
 
-26. Micro analysis of McLaren Park/Amazon-Crocker Neighborhood: the "safest" neighborhood in San Francisco (Roland Abellano's analysis of McLaren Neighborhood)
+27. Exported data frame to excel to conduct analysis by crime type, per neighborhood, over time. Analyzed top safest and least safest areas per article against findings from our data set.
+    Excel files titled : Excel_Crime_Top5.xlsm and Excel_Crime_Worst5.xlsm.
+    
+29. Micro analysis of McLaren Park/Amazon-Crocker Neighborhood: the "safest" neighborhood in San Francisco (Roland Abellano's analysis of McLaren Neighborhood)
 
     ```
     Based on the article, "The 15 Safest Neighborhoods In San Francisco", by Jessica Stone in the website, Upgraded Homes, Crocker-Amazon was one of the 15 safest neighborhood on San Francisco. As a local San Franciscan living only a mile east of Crocker-Amazon neighborhood, I have a personal stake at the accuracy of what Ms. Stone's article is claiming. I would like to find out if District 10, where Amazon-Crocker and my local neighborhood, Bayview, have significant crime rate rating difference in comparison to the rest of San Francisco.
@@ -369,7 +372,7 @@ Follow these steps to set up the project environment:
         
     ```
 
-27. Show the crime rate of the 40 neighborhoods in San Francisco for the Year 2020
+30. Show the crime rate of the 40 neighborhoods in San Francisco for the Year 2020
     ```
     # Filter data for 'Incident Year' 2020
     crimes_2020 = sf_orig_df[sf_orig_df['Incident Year'] == 2020]
@@ -384,7 +387,7 @@ Follow these steps to set up the project environment:
     print(f"\nThe neighborhood with the LOWEST CRIME INCIDENT in the year 2020 is {neighborhood_counts.idxmin()}")
     ```
 
-28. Show a line graph indicating the number of crime incidents in McLaren Park/Crocker-Amazon for Year 2020. Spoiler Alert: Monday seems to be the day when the most crimes were committed in McLaren Park/Crocker-Amazon for the year 2020
+31. Show a line graph indicating the number of crime incidents in McLaren Park/Crocker-Amazon for Year 2020. Spoiler Alert: Monday seems to be the day when the most crimes were committed in McLaren Park/Crocker-Amazon for the year 2020
 
     ```
     # Analyze data to show what day of the week is crime commited the most in McLAren Park/Cro
@@ -407,7 +410,7 @@ Follow these steps to set up the project environment:
     plt.show()
     ```
 
-29. For the sake of comparison, show the same week-long crime trend for McLaren Park/Crocker Amazon for a period of 5 years (2018-2023). Spoiler Alert: From year 2018 to year 2023, Friday seems to be the day when most crimes were committed in McLaren Park/Crocker-Amazon neighborhood
+32. For the sake of comparison, show the same week-long crime trend for McLaren Park/Crocker Amazon for a period of 5 years (2018-2023). Spoiler Alert: From year 2018 to year 2023, Friday seems to be the day when most crimes were committed in McLaren Park/Crocker-Amazon neighborhood
 
     ```
     # Filter data for McLaren Park
@@ -429,7 +432,7 @@ Follow these steps to set up the project environment:
     plt.show()
     ```
 
-30. Show the types of crime committed in McLaren Park/Crocker-Amazon from year 2018 to 2023. Spoiler Alert: Larceny-Theft is the most committed crime in McLaren Park/Crocker-Amazon from 2018-2023
+33. Show the types of crime committed in McLaren Park/Crocker-Amazon from year 2018 to 2023. Spoiler Alert: Larceny-Theft is the most committed crime in McLaren Park/Crocker-Amazon from 2018-2023
 
 ```
 mclaren_park_data_incident_types = sf_orig_df[(sf_orig_df['Analysis Neighborhood'] == 'McLaren Park') & (sf_orig_df['Incident Year'].between(2018, 2023))]
