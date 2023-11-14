@@ -716,5 +716,7 @@ print(f"The percentage of Mclaren Park/Crocker-Amazon incidents in comparison to
     plt.grid(True)
     plt.show()
     ```
+42. Export the clean CSV file "SF_Crime_Data_from_2018_to_Present_CLEANED.csv" and upload into Tableau. Begin my creating a calculated field to incorporate the 6 geneeral levels of crime as previously defined:'Violent Crime', 'Property Crime', 'White Collar Crime', 'Drug & Alcohol Crime', 'Hate Crime', and 'Quality-of-Life Crime'. Create a calulcated field that defines "day" vs. "night". With these two calulcated fields in place, we can use the crime levels and day and night as filters for our visualizations. A dashboard is constructed with a series of three pie charts, one for day to night crime distribution, one for day of the week distribution, and one for the 6 categories of crime. Filters for year, community, day vs. night, day of the week and type of crime were used to filter the 5 visualizations below, allowing the user to quickly see the distribution of crime for any of those many factors alone or in combination. 
+
 
 *** END OF CODE ***
