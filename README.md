@@ -6,7 +6,7 @@
 **Date Created:** 11/10/2023
 
 ## Description
-At SafetyNet Analytics Group, we recognize the prevalent issue of crime in San Francisco, a reality many of us have come to know through various channels such as media reports, word or mouth, and personal experiences, or anecdotes. Our investigation is primarily anchored in a study by "Upgraded Home," which identifies 15 neighborhoods in San Francisco as being the safest. Our objective is to delve deeper into the state of crime in the city by examining geospatial data related to criminal activities. This analysis aims to provide insightful assessments for those considering residency in the area, highlighting neighborhoods with the highest and lowest crime rates. Additionally, we will present trends observed in criminal activities over a span of five years..
+At SafetyNet Analytics Group, we recognize the prevalent issue of crime in San Francisco, a reality many of us have come to know through various channels such as media reports, word or mouth, and personal experiences, or anecdotes. Our investigation is primarily anchored in a study by "Upgraded Home," which identifies 15 neighborhoods in San Francisco as being the safest. Our objective is to delve deeper into the state of crime in the city by examining geospatial data related to criminal activities. This analysis aims to provide insightful assessments for those considering residency in the area, highlighting neighborhoods with the highest and lowest crime rates. Additionally, we will present trends observed in criminal activities over a span of five years.
 
 ## Analysis ##
 **SafetyNet's** [San Francisco Crime Report (2018-2023) ](https://github.com/rabellan/SafetyNet/blob/main/Group%203%20Project%20-%20SafetyNet.pdf)
@@ -348,10 +348,192 @@ Follow these steps to set up the project environment:
     newcode_clean_org.reset_index()
     ```
 
-27. Exported data frame to excel to conduct analysis by crime type, per neighborhood, over time. Analyzed top safest and least safest areas per article against findings from our data set.
+26. Create a graph for the number or Incident by Crime Type vs Month in San Francisco between 2018 - 2023
+    ```
+    newcode_clean = newcode_clean.copy()
+    newcode_clean['Incident Datetime'] = pd.to_datetime(newcode_clean['Incident Datetime'])
+    newcode_clean['Month'] = newcode_clean['Incident Datetime'].dt.month
+
+    # Dictionary
+    crime_mapping = {
+        101: 'Violent Crime',
+        102: 'Property Crime',
+        103: 'White Collar Crime',
+        104: 'Drug & Alcohol Crime',
+        105: 'Hate Crime',
+        106: 'Quality-of-Life Crime'
+    }
+
+    # Create a separate line for each crime type
+    plt.figure(figsize=(10, 6))
+
+    for code, description in crime_mapping.items():
+        # Filter rows for the specific crime code
+        filtered_data = newcode_clean[newcode_clean['New Incident Code'] == code]
+        
+        # Group by 'Month' and count the occurrences
+        incident_counts = filtered_data['Month'].value_counts().sort_index()
+        
+        # Plot the line for the crime type
+        plt.plot(incident_counts.index, incident_counts.values, label=description, marker='o', linestyle='-')
+
+    plt.title('Incidents by Crime Type and Month in San Francisco Between 2018-2023')
+    plt.xlabel('Month')
+    plt.ylabel('Count')
+    plt.grid(True)
+
+    months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    plt.xticks(incident_counts.index, [months[month - 1] for month in incident_counts.index])
+    plt.legend(loc='upper right')
+    plt.show()
+    
+    ```  
+
+27. Create a chart based on the number of incidents of the top two crimes (Violent Crime & Property Crime) in San Francisco between 2018 - 2023
+    ```
+    # Filtering the data for violent crimes (New Incident Code 101) and property crimes (New Incident Code 102)
+    violent_crimes = newcode_clean[newcode_clean['New Incident Code'] == 101]
+    property_crimes = newcode_clean[newcode_clean['New Incident Code'] == 102]
+
+    # Grouping by neighborhoods and counting the occurrences for each type of crime
+    violent_counts = violent_crimes['Analysis Neighborhood'].value_counts()
+    property_counts = property_crimes['Analysis Neighborhood'].value_counts()
+
+    # Combining the counts of both types of crime
+    combined_counts = violent_counts.add(property_counts, fill_value=0)
+
+    # Sorting neighborhoods by the sum of Violent Crimes and Property Crimes
+    sorted_neighborhoods = combined_counts.sort_values(ascending=False)
+
+    # Creating a horizontal bar chart with two bars for each neighborhood
+    plt.figure(figsize=(10, 8))
+    bar_width = 0.35
+    index = range(len(sorted_neighborhoods))
+
+    plt.barh(index, violent_counts[sorted_neighborhoods.index], bar_width, label='Violent Crimes', color='teal')
+    plt.barh([i + bar_width for i in index], property_counts[sorted_neighborhoods.index], bar_width, label='Property Crimes', color='salmon')
+
+    plt.yticks([i + bar_width / 2 for i in index], sorted_neighborhoods.index)
+    plt.xlabel('Number of Incidents')
+    plt.title('Violent and Property Crimes by Neighborhood in SF Between 2018-2023')
+    plt.legend()
+    plt.margins(y=0.01)
+    plt.show()
+    ``` 
+
+28. Create a bar chart for the number of incidents by Crime Type of each Neighborhood
+```
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Dictionary
+crime_mapping = {
+    101: 'Violent Crime',
+    102: 'Property Crime',
+    103: 'White Collar Crime',
+    104: 'Drug & Alcohol Crime',
+    105: 'Hate Crime',
+    106: 'Quality-of-Life Crime'
+}
+
+# Create a new column 'Crime Type' by mapping the code numbers to descriptions
+newcode_clean['Crime Type'] = newcode_clean['New Incident Code'].map(crime_mapping)
+
+# Group by neighborhoods and count the occurrences for each crime type
+neighborhood_counts = newcode_clean.groupby(['Analysis Neighborhood', 'Crime Type']).size().unstack(fill_value=0)
+
+# Calculate the total count of incidents (sum of codes 101-106) for each neighborhood
+neighborhood_counts['Total'] = neighborhood_counts.sum(axis=1)
+
+# Sort neighborhoods by the total count of incidents
+sorted_neighborhoods = neighborhood_counts['Total'].sort_values(ascending=False)
+
+# Create a horizontal stacked bar chart for each neighborhood
+plt.figure(figsize=(10, 18))
+index = range(len(sorted_neighborhoods))
+colors = ['teal', 'hotpink', 'darkgreen', 'darkred', 'skyblue', 'purple']
+bottom = [0] * len(sorted_neighborhoods)
+
+for i, crime_type in enumerate(['Violent Crime', 'Property Crime', 'White Collar Crime', 'Drug & Alcohol Crime', 'Hate Crime', 'Quality-of-Life Crime']):
+    counts = neighborhood_counts[crime_type][sorted_neighborhoods.index]
+    plt.barh(index, counts, label=crime_type, left=bottom, color=colors[i])
+    bottom = [x + y for x, y in zip(bottom, counts)]
+
+plt.yticks(index, sorted_neighborhoods.index)
+plt.xlabel('Number of Incidents')
+plt.title('Incidents by Crime Type and Neighborhood')
+plt.legend()
+plt.margins(y=0.01)
+plt.show()
+
+```
+
+29. Create a chart based on the top ten safest neighborhoods by crime type in San Francisco between 2018 - 2023
+    ```
+    # Filter for the top 10 safest neighborhoods
+    top_10_safest_neighborhoods = sorted_neighborhoods.tail(10)
+
+    # Define crime types and colors
+    crime_types = ['Violent Crime', 'Property Crime', 'White Collar Crime', 'Drug & Alcohol Crime', 'Hate Crime', 'Quality-of-Life Crime']
+    colors = ['teal', 'hotpink', 'darkgreen', 'darkred', 'skyblue', 'purple']
+
+    # Creating a horizontal stacked bar chart for the top 10 safest neighborhoods
+    plt.figure(figsize=(10, 10))
+    index = range(len(top_10_safest_neighborhoods))
+    bottom = [0] * len(top_10_safest_neighborhoods)
+
+    # Iterate through each crime type and add bars to the chart
+    for i in range(len(crime_types)):
+        crime_type = crime_types[i]
+        counts = neighborhood_counts[crime_type][top_10_safest_neighborhoods.index]
+        plt.barh(index, counts, label=crime_type, left=bottom, color=colors[i])
+        bottom = [x + y for x, y in zip(bottom, counts)]
+
+    plt.yticks(index, top_10_safest_neighborhoods.index)
+    plt.xlabel('Number of Incidents')
+    plt.title('Top 10 Safest Neighborhoods by Crime Type in SF Between 2018-2023')
+    plt.legend()
+    plt.margins(y=0.01)
+    plt.show()
+
+    ```  
+
+
+30. Create a chart based on the top 10 dangerous neighborhoods in San Francisco between 2018 - 2023
+
+    ```
+    # Filter for the top 10 dangerous neighborhoods
+    top_10_dangerous_neighborhoods = sorted_neighborhoods.head(10)
+
+    # Define crime types and colors
+    crime_types = ['Violent Crime', 'Property Crime', 'White Collar Crime', 'Drug & Alcohol Crime', 'Hate Crime', 'Quality-of-Life Crime']
+    colors = ['teal', 'hotpink', 'darkgreen', 'darkred', 'skyblue', 'purple']
+
+    # Creating a horizontal stacked bar chart for the top 10 dangerous neighborhoods
+    plt.figure(figsize=(10, 10))
+    index = range(len(top_10_dangerous_neighborhoods))
+    bottom = [0] * len(top_10_dangerous_neighborhoods)
+
+    # Iterate through each crime type and add bars to the chart
+    for i in range(len(crime_types)):
+        crime_type = crime_types[i]
+        counts = neighborhood_counts[crime_type][top_10_dangerous_neighborhoods.index]
+        plt.barh(index, counts, label=crime_type, left=bottom, color=colors[i])
+        bottom = [x + y for x, y in zip(bottom, counts)]
+
+    plt.yticks(index, top_10_dangerous_neighborhoods.index)
+    plt.xlabel('Number of Incidents')
+    plt.title('Top 10 Dangerous Neighborhoods by Crime Type in SF Between 2018-2023')
+    plt.legend()
+    plt.margins(y=0.01)
+    plt.show()
+
+    ```
+
+31. Exported data frame to excel to conduct analysis by crime type, per neighborhood, over time. Analyzed top safest and least safest areas per article against findings from our data set.
     Excel files titled : Excel_Crime_Top5.xlsm and Excel_Crime_Worst5.xlsm.
     
-29. Micro analysis of McLaren Park/Amazon-Crocker Neighborhood: the "safest" neighborhood in San Francisco (Roland Abellano's analysis of McLaren Neighborhood)
+32. Micro analysis of McLaren Park/Amazon-Crocker Neighborhood: the "safest" neighborhood in San Francisco (Roland Abellano's analysis of McLaren Neighborhood)
 
     ```
     Based on the article, "The 15 Safest Neighborhoods In San Francisco", by Jessica Stone in the website, Upgraded Homes, Crocker-Amazon was one of the 15 safest neighborhood on San Francisco. As a local San Franciscan living only a mile east of Crocker-Amazon neighborhood, I have a personal stake at the accuracy of what Ms. Stone's article is claiming. I would like to find out if District 10, where Amazon-Crocker and my local neighborhood, Bayview, have significant crime rate rating difference in comparison to the rest of San Francisco.
@@ -372,7 +554,7 @@ Follow these steps to set up the project environment:
         
     ```
 
-30. Show the crime rate of the 40 neighborhoods in San Francisco for the Year 2020
+33. Show the crime rate of the 40 neighborhoods in San Francisco for the Year 2020
     ```
     # Filter data for 'Incident Year' 2020
     crimes_2020 = sf_orig_df[sf_orig_df['Incident Year'] == 2020]
@@ -387,7 +569,7 @@ Follow these steps to set up the project environment:
     print(f"\nThe neighborhood with the LOWEST CRIME INCIDENT in the year 2020 is {neighborhood_counts.idxmin()}")
     ```
 
-31. Show a line graph indicating the number of crime incidents in McLaren Park/Crocker-Amazon for Year 2020. Spoiler Alert: Monday seems to be the day when the most crimes were committed in McLaren Park/Crocker-Amazon for the year 2020
+34. Show a line graph indicating the number of crime incidents in McLaren Park/Crocker-Amazon for Year 2020. Spoiler Alert: Monday seems to be the day when the most crimes were committed in McLaren Park/Crocker-Amazon for the year 2020
 
     ```
     # Analyze data to show what day of the week is crime commited the most in McLAren Park/Cro
@@ -410,7 +592,7 @@ Follow these steps to set up the project environment:
     plt.show()
     ```
 
-32. For the sake of comparison, show the same week-long crime trend for McLaren Park/Crocker Amazon for a period of 5 years (2018-2023). Spoiler Alert: From year 2018 to year 2023, Friday seems to be the day when most crimes were committed in McLaren Park/Crocker-Amazon neighborhood
+35. For the sake of comparison, show the same week-long crime trend for McLaren Park/Crocker Amazon for a period of 5 years (2018-2023). Spoiler Alert: From year 2018 to year 2023, Friday seems to be the day when most crimes were committed in McLaren Park/Crocker-Amazon neighborhood
 
     ```
     # Filter data for McLaren Park
@@ -432,7 +614,7 @@ Follow these steps to set up the project environment:
     plt.show()
     ```
 
-33. Show the types of crime committed in McLaren Park/Crocker-Amazon from year 2018 to 2023. Spoiler Alert: Larceny-Theft is the most committed crime in McLaren Park/Crocker-Amazon from 2018-2023
+36. Show the types of crime committed in McLaren Park/Crocker-Amazon from year 2018 to 2023. Spoiler Alert: Larceny-Theft is the most committed crime in McLaren Park/Crocker-Amazon from 2018-2023
 
 ```
 mclaren_park_data_incident_types = sf_orig_df[(sf_orig_df['Analysis Neighborhood'] == 'McLaren Park') & (sf_orig_df['Incident Year'].between(2018, 2023))]
@@ -460,7 +642,7 @@ mclaren_percentage_2018_2020 = (total_incident_count_mclaren / total_sf_incident
 print(f"The percentage of Mclaren Park/Crocker-Amazon incidents in comparison to the entire city of San Francisco from 2018 to 2023 is {mclaren_percentage_2018_2020})
 ```
 
-31. Filter the incidents for McLaren Park/Crocker-Amazon and compare to the rest of San Francisco
+37. Filter the incidents for McLaren Park/Crocker-Amazon and compare to the rest of San Francisco
     ```
     # Filter incidents for McLaren Park/Crocker-Amazon
     mclaren_park_data = sf_orig_df[(sf_orig_df['Analysis Neighborhood'] == 'McLaren Park') & (sf_orig_df['Incident Year'].between(2018, 2023))]
@@ -479,7 +661,7 @@ print(f"The percentage of Mclaren Park/Crocker-Amazon incidents in comparison to
 
     ```
 
-32. To show a bit of comparison with McLaern Park/Crocker Amazon's crime rate for the year 2020, show the neighborhood that has the most crime committed in San Francisco in the same year
+38. To show a bit of comparison with McLaern Park/Crocker Amazon's crime rate for the year 2020, show the neighborhood that has the most crime committed in San Francisco in the same year
 
     ```
     # Filter incidents for the year 2020
@@ -493,10 +675,10 @@ print(f"The percentage of Mclaren Park/Crocker-Amazon incidents in comparison to
 
     # Print the result
     print(f"The neighborhood with the highest crime rate in 2020 is: {highest_crime_neighborhood['Analysis Neighborhood']}")
-    print(f"Total incidents in {highest_crime_neighborhood['Analysis Neighborhood']} in 2020: {highest_crime_neighborhood['Incid
+    print(f"Total incidents in {highest_crime_neighborhood['Analysis Neighborhood']} in 2020: {highest_crime_neighborhood['Incident Count']}")
     ```
 
-33. Based on the DataSF dataset, the Tenderloin, a neighborhood in the heart of San Francisco, considered to be the grittiest place in the enture city, is the neighrhood with the most crime in the Year 2020
+39. Based on the DataSF dataset, the Tenderloin, a neighborhood in the heart of San Francisco, considered to be the grittiest place in the enture city, is the neighrhood with the most crime in the Year 2020
     ```
     # Filter incidents for the year 2020
     sf_2020_data = sf_orig_df[sf_orig_df['Incident Year'] == 2020]
@@ -513,7 +695,7 @@ print(f"The percentage of Mclaren Park/Crocker-Amazon incidents in comparison to
 
     ```
 
-34. Create a line chart that shows how McLaren Park/Crocker-Amazon's crime rate stacks up against the Tenderloin, the crittiest part of San Francisco, and two of the most expensive neighborhoods in the city, Marina District, and Pacific Heights
+40. Create a line chart that shows how McLaren Park/Crocker-Amazon's crime rate stacks up against the Tenderloin, the crittiest part of San Francisco, and two of the most expensive neighborhoods in the city, Marina District, and Pacific Heights
     ```
     # Group data by "Incident Year" and "Analysis Neighborhood"
     grouped_data = sf_orig_df.groupby(['Incident Year', 'Analysis Neighborhood']).size().reset_index(name='Incident Count')
